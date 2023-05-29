@@ -23,7 +23,7 @@
                         <td>{{ $comic['series'] }}</td>
                         <td>{{ $comic['type'] }}</td>
                         <td class="text-center">
-                            <a class="btn btn-primary" href="#">
+                            <a class="btn btn-primary" href="{{ route('comics.show', $comic['id']) }}">
                                 <i class="fa-solid fa-circle-info"></i>
                             </a>
                         </td>
