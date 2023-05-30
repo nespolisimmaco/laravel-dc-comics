@@ -4,7 +4,7 @@
     <div class="container">
         <h1>DC Comics</h1>
         <div class="my-2 text-end">
-            <a class="btn btn-warning" href="{{ route('comics.create') }}">Crea un nuovo fumetto</a>
+            <a class="btn btn-secondary" href="{{ route('comics.create') }}">Crea un nuovo fumetto</a>
         </div>
         <table class="table table-striped">
             <thead>
@@ -28,6 +28,9 @@
                         <td class="text-center">
                             <a class="btn btn-primary" href="{{ route('comics.show', $comic['id']) }}">
                                 <i class="fa-solid fa-circle-info"></i>
+                            </a>
+                            <a class="btn btn-warning" href="{{ route('comics.edit', $comic['id']) }}">
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                         </td>
                     </tr>
