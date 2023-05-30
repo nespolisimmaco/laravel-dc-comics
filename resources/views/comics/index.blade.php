@@ -14,7 +14,7 @@
                     <th scope="col">Prezzo</th>
                     <th scope="col">Serie</th>
                     <th scope="col">Tipo</th>
-                    <th scope="col">Vedi dettagli</th>
+                    <th scope="col">Azioni</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,13 +25,21 @@
                         <td>{{ $comic['price'] }}</td>
                         <td>{{ $comic['series'] }}</td>
                         <td>{{ $comic['type'] }}</td>
-                        <td class="text-center">
+                        <td>
                             <a class="btn btn-primary" href="{{ route('comics.show', $comic['id']) }}">
                                 <i class="fa-solid fa-circle-info"></i>
                             </a>
                             <a class="btn btn-warning" href="{{ route('comics.edit', $comic['id']) }}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
+                            <form class="d-inline-block" action="{{ route('comics.destroy', $comic['id']) }}"
+                                method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
