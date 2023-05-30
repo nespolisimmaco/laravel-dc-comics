@@ -33,5 +33,7 @@
                 </div>
             </li>
         </ul>
+        <a href="{{ route('comics.index') }}" class="btn btn-primary my-3">Torna alla lista</a>
+        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning my-3 d-inline-block">Modifica</a>
     </div>
 @endsection

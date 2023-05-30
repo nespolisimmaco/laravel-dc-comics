@@ -32,11 +32,12 @@
             <div class="mb-3">
                 <label for="type">Tipo</label>
                 <select class="form-select" id="type" name="type">
-                    <option value="comic-cook">Comic book</option>
+                    <option value="comic-book">Comic book</option>
                     <option value="graphic-novel">Graphic novel</option>
                 </select>
             </div>
             <button class="btn btn-success my-2" type="submit">Invia</button>
+            <a href="{{ route('comics.index') }}" class="btn btn-primary my-3">Torna alla lista</a>
         </form>
     </div>
 @endsection
