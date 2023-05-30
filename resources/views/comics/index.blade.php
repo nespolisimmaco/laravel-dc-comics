@@ -36,7 +36,7 @@
                                 method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">
+                                <button onclick="confirmation()" type="submit" class="btn btn-danger">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </form>
@@ -47,4 +47,11 @@
             </tbody>
         </table>
     </div>
+    @push('other-scripts')
+        <script>
+            function confirmation() {
+                confirm("Sei sicuro di voler eliminare?");
+            }
+        </script>
+    @endpush
 @endsection

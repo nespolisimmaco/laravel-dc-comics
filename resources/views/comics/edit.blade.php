@@ -39,7 +39,7 @@
                 </select>
             </div>
             <button class="btn btn-success my-2" type="submit">Invia</button>
-            <a href="{{ route('comics.index') }}" class="btn btn-primary my-3 d-inline-block">Torna alla lista</a>
+            <a href="{{ route('comics.index') }}" class="btn btn-primary my-3 mx-1 d-inline-block">Torna alla lista</a>
         </form>
     </div>
 @endsection
