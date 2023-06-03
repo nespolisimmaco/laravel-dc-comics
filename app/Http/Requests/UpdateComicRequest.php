@@ -27,10 +27,25 @@ class UpdateComicRequest extends FormRequest
             'title'=>'required|min:4|max:100',
             'description'=>'nullable',
             'image'=>'required',
-            'price'=>'required|min:4|max:10',
+            'price'=>'required|min:3|max:10',
             'series'=>'required|min:3|max:50',
             'sale_date'=>'required',
-            'type'=>'required|min:3|max:50',
+            'type'=>'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required'=>'Attenzione! Inserire un titolo',
+            'title.min'=>'Il titolo deve essere lungo almeno :min caratteri',
+            'image.required'=>'Attenzione! Inserire un\'immagine',
+            'price.required'=>'Attenzione! Inserire un prezzo',
+            'price.min'=>'Il prezzo deve essere lungo almeno :min caratteri',
+            'series.required'=>'Attenzione! Inserire una serie',
+            'series.min'=>'La serie deve essere lunga almeno :min caratteri',
+            'sale_date.required'=>'Attenzione! Inserire una data di vendita',
+            'type.required'=>'Attenzione! Inserire un tipo'
         ];
     }
 }
